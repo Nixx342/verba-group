@@ -1,50 +1,15 @@
-# React + TypeScript + Vite
+Запуск проекта:
+    1. выполнить команду 'npm install'
+    2.
+        - для запуска локально на ПК выполнить команду 'npm run dev'
+        - для запуска в локальной сети выполнить команду 'npm run host'
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Добавление задачи просиходит по нажатию кнопки "Добавить" или по нажатию кнопки Enter при активном и заполненном 
+поле "Пополните список"
+- Кнопка "Очистить список" переносит задачи из активного списка в список "Корзина"
+- Кнопка отметки что задача выполнена в списке "Текущие дела" переносит задачу в список выполненные дела
+- Кнопка возврата задачи в списке "Выполненные дела" возвращает задачу в список "Текущие дела"
+- Список "Все дела" объединяет все задачи из списков "Текущие дела" и "Выполненные дела" в котором можно менять статус задачи
+- Кнопка "Удалить" в списках "Текущие дела", "Все дела" и "Выполненные дела" переносит задачу в список "Корзина"
+- Кнопка "Восстановить задачу" в спивке "Корзина" переносит задачу в список "Текущие дела"
+- кнопка "Очистить корзину" удаляет все задачи находящиеся в списке (удаляет записи из таблицы)
