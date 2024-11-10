@@ -1,0 +1,135 @@
+. home-page {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.header__logout-button {
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.header__logout-button:hover {
+    background-color: #004ca5;
+}
+
+.task-board__tab {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+    width: 40%;
+}
+
+.task-board__tab__item {
+    background: none;
+    border: none;
+    color: #aaa; /* Цвет неактивной кнопки */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+.task-board__tab__item:hover {
+    color: #cfcfcf; /* Цвет активной кнопки */
+}
+.task-board__tab__item.active {
+    color: white; /* Цвет активной кнопки */
+}
+
+.task-board__tab__item.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #3498db; /* Цвет полоски под активной кнопкой */
+}
+
+.task-board__clear-trash {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+}
+.task-board__clear-trash__btn {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #6a0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-board__clear-trash__btn:hover {
+    background-color: #870000;
+}
+
+.management-area {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+.management-area__input-task {
+    border: none;               /* Убираем стандартную рамку */
+    border-bottom: 2px solid #333; /* Добавляем нижнюю линию */
+    outline: none;              /* Убираем обводку при фокусе */
+    padding: 5px 0;             /* Добавляем немного отступов сверху и снизу */
+    font-size: 16px;
+    background: none;
+    width: 50%;
+}
+.management-area__input-task:focus {
+    border-bottom-color: #007bff;
+}
+.management-area__btn {
+    width: 20%;
+}
+.add-btn {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #046a00;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.add-btn:hover {
+    background-color: #034500;
+}
+.remove-btn {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #6a0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.remove-btn:hover {
+    background-color: #870000;
+}

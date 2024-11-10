@@ -1,0 +1,33 @@
+.task {
+    margin: 10px auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #424243;
+    min-height: 50px;
+    /*border-radius: 15px 2px;*/
+    border-radius: 15px;
+}
+
+.task__title {
+    width: 80%;
+    vertical-align: middle;
+}
+
+.task__buttons {
+    display: flex;
+    gap: 10px;
+}
+.ask__buttons__delete {
+    height: 30px;
+}
+.ask__buttons__delete:hover {
+    cursor: pointer;
+}
+.task__buttons__change {
+    height: 30px;
+}
+.task__buttons__change:hover {
+    cursor: pointer;
+}
